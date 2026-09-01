@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<!-- ============================================================
+     INDEX.HTML
+     Portada del sitio
+     ============================================================ -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Red Goat Eyes | Ropa urbana en Quito </title>
+    <meta name="description" content=" Tienda de ropa urbana unisex ">
+    <meta name="keywords" content=" ropa urbana, unisex, ecuador - quito, streetwear ">
+    <link rel="icon" type="image/png" href="assets/img/icons/RedGoatEyesIcon.png">
+
+    <!-- ---------------- Hojas de estilo ---------------- -->
+    <!-- El orden importa: responsive va al final para poder sobrescribir -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+</head>
+<body>
+
+
+    <!-- ---------------- Cabecera ---------------- -->
+    <!-- Se repite igual en las 13 paginas -->
+    <header class="site-header">
+
+
+        <!-- ---------------- Barra superior de ubicacion ---------------- -->
+        <div class="top-bar">
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span> Quito </span>
+            </div>
+        </div>
+
+
+        <!-- ---------------- Barra de navegacion ---------------- -->
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/banners/RedGoatEyesBanner.png" alt="Red Goat Eyes logo banner">
+                </a>
+            </div>
+
+
+            <!-- ---------------- Boton hamburguesa ---------------- -->
+            <!-- Solo se ve en pantallas menores a 768px -->
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <!-- ---------------- Enlaces del menu ---------------- -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html"> Inicio </a></li>
+
+                <li class="dropdown">
+                    <a href="pages/categorias.html"> Categorías <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/hoodies.html">Hoodies</a></li>
+                        <li><a href="pages/pantalones.html">Pantalones</a></li>
+                        <li><a href="pages/accesorios.html">Accesorios</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="pages/productos.html"> Productos </a></li>
+                <li><a href="pages/contacto.html"> Contacto </a></li>
+            </ul>
+
+
+            <!-- ---------------- Iconos de carrito y usuario ---------------- -->
+            <div class="nav-icons">
+                <a href="pages/carrito.html" class="icono-carrito" aria-label="Ver carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="carrito-contador" class="cart-count"> 0 </span>
+                </a>
+
+                <div class="usuario-menu">
+                    <button type="button" class="btn-usuario" id="btn-usuario" aria-label="Mi cuenta" aria-expanded="false">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+
+
+                    <!-- ---------------- Menu desplegable del usuario ---------------- -->
+                    <!-- Las clases solo-invitado y solo-cliente las controla el JavaScript segun la sesion -->
+                    <ul class="usuario-dropdown" id="usuario-dropdown">
+                        <li class="usuario-saludo solo-cliente" id="usuario-saludo"></li>
+                        <li class="solo-invitado"><a href="pages/login.html"> Iniciar sesión </a></li>
+                        <li class="solo-invitado"><a href="pages/registro.html"> Crear cuenta </a></li>
+                        <li class="solo-cliente"><a href="pages/carrito.html"> Mi carrito </a></li>
+                        <li class="solo-cliente"><button type="button" id="btn-salir"> Cerrar sesión </button></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+
+        <!-- ---------------- Banner principal ---------------- -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1> Nosotros </h1>
+
+                <p> 
+                    No hacemos ropa, creamos archivos.
+                </p>
+                <p>
+                    Red Goat Eyes nace de la intersección entre el caos urbano y la precisión del diseño. 
+                    Nos alejamos del fast-fashion para centrarnos en lo que realmente importa: siluetas arquitectónicas, gramajes pesados y una calidad que resiste el paso del tiempo.
+                </p>
+                <p>
+                    Cada drop es una curaduría limitada de piezas Boxy y Baggy diseñadas para quienes ven la calle como su propia galería.
+                </p>
+                <p>
+                    Calidad sin compromisos. Estética sin filtros.
+                </p>
+
+
+                <!-- ---------------- Instagram del equipo ---------------- -->
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/niicofel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de niicofel"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/elian.valenzuela.16/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Elian Valenzuela"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/rafachiriboga/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Rafael Chiriboga"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ---------------- Franja de beneficios ---------------- -->
+        <section class="benefits">
+
+            <article class="benefit">
+                <i class="fa-solid fa-truck"></i>
+                <h3> ENVIO RAPIDO </h3>
+                <p> Entrega en menos de 48 horas </p>
+            </article>
+            
+            <article class="benefit">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <h3> ECOLOGICO </h3>
+                <p> Material sostenible </p>
+            </article>
+
+            <article class="benefit">
+                <i class="fa-solid fa-credit-card"></i>
+                <h3> COMPRA SEGURA </h3>
+                <p> Puntos fisicos en Quito </p>
+            </article>
+
+            <article class="benefit">
+                <i class="fa-solid fa-tags"></i>
+                <h3> REBAJAS </h3>
+                <p> Ofertas en cada drop </p>
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- ---------------- Pie de pagina ---------------- -->
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-left">
+                <p> Copyright © 2026 <strong> Red Goat Eyes </strong> | Creacion propia por niicofel &amp; Elian &amp; Rafael </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ---------------- Scripts ---------------- -->
+    <!-- carrito-contador va primero porque los demas usan sus funciones -->
+    <script src="assets/js/carrito-contador.js"></script>
+    <script src="assets/js/menu.js"></script>
+
+</body>
+</html>
