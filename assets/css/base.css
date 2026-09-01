@@ -1,0 +1,94 @@
+/* ============================================================
+   BASE.CSS
+   Lo primero que se carga: reinicio, colores y tipografia
+   ============================================================ */
+/* ---------------- Reinicio general ---------------- */
+/* Quita margenes y rellenos que el navegador pone por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ---------------- Colores y fuentes de la marca ---------------- */
+/* Variables que se usan en todo el sitio. Cambiarlas aqui cambia todo */
+:root {
+    --rojo: #c00000;
+    --rojo-oscuro: #900000;
+    --negro: #0a0a0a;
+    --negro-suave: #111111;
+    --negro-benefits: #0c0c0c;
+
+    --gris-barra: #f5f5f5;
+    --gris-fondo: #f4f4f4;
+    --gris-card: #eeeeee;
+    --gris-borde: #dddddd;
+    --gris-texto: #777777;
+    --gris-claro: #cccccc;
+    --gris-formulario: #635f5f;
+
+    --blanco: #ffffff;
+    --error: #ff4d4d;
+    --error-fondo: #fff0f0;
+    --exito: #2e7d32;
+
+    --fuente: Arial, Helvetica, sans-serif;
+    --radio: 4px;
+    --radio-grande: 8px;
+    --sombra: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --sombra-fuerte: 0 10px 25px rgba(0, 0, 0, 0.2);
+    --transicion: 0.3s ease;
+}
+
+
+/* ---------------- Cuerpo de la pagina ---------------- */
+body {
+    font-family: var(--fuente);
+    background-color: var(--blanco);
+    color: var(--negro-suave);
+    min-height: 100vh;
+}
+
+
+/* ---------------- Contenido principal ---------------- */
+main {
+    display: block;
+}
+
+
+/* ---------------- Imagenes ---------------- */
+/* max-width 100% evita que se salgan de su contenedor en el celular */
+img {
+    max-width: 100%;
+}
+
+
+/* ---------------- Utilidad para esconder cosas ---------------- */
+/* Lleva !important porque otros archivos definen display despues */
+.oculto {
+    display: none !important;
+}
+
+
+/* ---------------- Mostrar u ocultar segun la sesion ---------------- */
+/* El JavaScript pone la clase con-sesion o sin-sesion en el body */
+body.sin-sesion .solo-cliente {
+    display: none !important;
+}
+
+body.con-sesion .solo-invitado {
+    display: none !important;
+}
+
+
+/* ---------------- Contorno al navegar con teclado ---------------- */
+/* Para que se vea donde estas cuando usas Tab */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--rojo);
+    outline-offset: 2px;
+}
